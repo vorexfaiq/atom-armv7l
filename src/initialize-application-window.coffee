@@ -57,6 +57,7 @@ require('wrap-guide')
 
 clipboard = new Clipboard
 TextEditor.setClipboard(clipboard)
+TextEditor.viewForOverlayItem = (item) -> atom.views.getView(item)
 
 global.atom = new AtomEnvironment({
   clipboard,
@@ -84,8 +85,18 @@ module.exports = ({blobStore}) ->
   # Make React faster
   process.env.NODE_ENV ?= 'production' unless devMode
 
+<<<<<<< HEAD
   global.atom.initialize({
     window, document, blobStore,
+=======
+  clipboard = new Clipboard
+  TextEditor.setClipboard(clipboard)
+  TextEditor.viewForOverlayItem = (item) -> atom.views.getView(item)
+
+  window.atom = new AtomEnvironment({
+    window, document, clipboard, blobStore,
+    applicationDelegate: new ApplicationDelegate,
+>>>>>>> Add static TextEditor.viewForOverlayItem method to avoid using global
     configDirPath: process.env.ATOM_HOME,
     env: process.env
   })
