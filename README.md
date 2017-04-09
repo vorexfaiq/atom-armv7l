@@ -59,7 +59,7 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 
 Solving some troubles will be added tomorrow. 
 
-If you're unable to build it on your machine, report error to the issues or write to my email in my profile for armv7l prebuilt binaries.
+If you're unable to build it on your machine, report error to the issues or write to my email in my profile for armv7l prebuilt binaries. 
 
 ## License
 
