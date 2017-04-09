@@ -161,7 +161,7 @@ function renamePackagedAppDir (packageOutputDirPath) {
     } else if (process.arch === 'x64') {
       architecture = 'amd64'
     } else {
-      architecture = process.arch
+      architecture = process.arch + "v7l"
     }
     packagedAppPath = path.join(CONFIG.buildOutputPath, `${appName}-${CONFIG.appMetadata.version}-${architecture}`)
     if (fs.existsSync(packagedAppPath)) fs.removeSync(packagedAppPath)
