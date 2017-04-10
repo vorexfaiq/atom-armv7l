@@ -61,7 +61,7 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 ## Troubleshooting
 - After building and launching Atom I got white screen, developer tools and string where I can type. Where is interface?
 
-It looks like Atom packages that are normaly downloaded during install are missing. You will need to launch Atom for first time, to let it create the profile folder (~/.atom), then, move atom.firstboot.sh to your ready Atom folder with binaries (e.g ~/atom/out/app/atom-1.15.0-armv7l/) and launch it. This script will reinstall all default packages.
+It looks like Atom packages that are normally downloaded during install are missing. You will need to launch Atom for first time, to let it create the profile folder (~/.atom), then, move atom.firstboot.sh to your ready Atom folder with binaries (e.g ~/atom/out/app/atom-1.15.0-armv7l/) and launch it. This script will reinstall all default packages.
 
 If you're unable to build it on your machine, report error to the issues or write to my email in my profile for armv7l prebuilt binaries. 
 
