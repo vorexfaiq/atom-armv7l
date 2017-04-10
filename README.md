@@ -11,6 +11,8 @@ announcements.
 
 I unable to build the newest version of Atom due to broken mksnapshot binaries for armv7l, so in this guide we using latest stable version.
 
+Please, do not try to build it on other platforms. This fork only for armv7l machines!
+
 ### Prerequisites
 
 All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don't guarantee that this guide will work for all devices. I succesfully build Atom on my machine and just want to share some build advices.
@@ -56,8 +58,9 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 `script/build`
 
 ## Troubleshooting
+- After building and launching Atom I got white screen, developer tools and string where I can type. Where is interface?
 
-Solving some troubles will be added tomorrow. 
+Looks like Atom packages downloaded during install are missing. You need to launch Atom for first time, to let him create profile folder (~/.atom), then, move atom.firstboot.sh to your ready Atom folder with binaries (e.g ~/atom/out/app/atom-1.15.0-armv7l/) and launch it. This script will reinstall all default packages.
 
 If you're unable to build it on your machine, report error to the issues or write to my email in my profile for armv7l prebuilt binaries. 
 
