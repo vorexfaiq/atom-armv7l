@@ -9,6 +9,7 @@ announcements.
 
 ## Building Atom 1.15.0 for armv7l machine
 
+![atom-1.15.0-armv7l](http://i.imgur.com/BFspfjR.jpg)
 I unable to build the newest version of Atom due to broken mksnapshot binaries for armv7l, so in this guide we using latest stable version.
 
 Please, do not try to build it on other platforms. This fork only for armv7l machines!
