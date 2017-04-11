@@ -59,9 +59,27 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 `node script/build`
 
 ## Troubleshooting
+
+- After building and launching Atom I got white screen, developer tools and error in developer console says "index.js:56 Error: ENOENT, node_modules/log4js/node_modules/semver/semver.js not found in /home/%username%/atom/out/atom-1.15.0-armv7l/resources/app.asar"
+
+Okay, I don't know how to fix this error before installing, but I have a way to fix it after: 
+
+Open your Atom folder with sources (where you download Atom via git) - e.g `cd ~/atom/`. 
+
+Install asar (electron archivator-like programm) by `npm install asar` and after installing go to atom/out/atom-1.15.0-armv7l/resources by `cd ~/atom/out/atom-1.15.0-armv7l`.
+
+Unpack app.asar in folder app.asar.ext (no matter how you name it) by `node ~/atom/node_modules/asar/bin/asar.js e app.asar app.asar.ext` and wait some time for extracting.
+
+After successful extracting app.asar go into app.asar.ext (`cd app.asar.ext`) and install log4js there by typing `npm install --save-dev log4js`
+
+After installing log4js go into it's folder (`cd node_modules/log4js`) and install semver by typing `npm install --save-dev semver`
+
+After all this steps, backup original app.asar to somewhere, remove it and pack app.asar.ext into app.asar by following commands: `cd ~/atom/out/atom-1.15.0-armv7l/resources`; `node ~/atom/node_modules/asar/bin/asar.js p app.asar.ext app.asar` and after succesful packing try to launch Atom. If error disappeared but you still have white screen - complete the next troubleshooting part (below this).
+
 - After building and launching Atom I got white screen, developer tools and string where I can type. Where is interface?
 
 It looks like Atom packages that are normally downloaded during install are missing. You will need to launch Atom for first time, to let it create the profile folder (~/.atom), then, move atom.firstboot.sh to your ready Atom folder with binaries (e.g ~/atom/out/app/atom-1.15.0-armv7l/) and launch it. This script will reinstall all default packages.
+
 
 If you're unable to build it on your machine, report error to the issues or write to my email in my profile for armv7l prebuilt binaries. 
 
