@@ -1,4 +1,4 @@
-![Atom](https://i.gyazo.com/ce02f284e5d47e0b77a60728aadf0e98.png)
+![Atom](https://cloud.githubusercontent.com/assets/72919/2874231/3af1db48-d3dd-11e3-98dc-6066f8bc766f.png)
 
 Atom is a hackable text editor for the 21st century, built on [Electron](https://github.com/atom/electron), and based on everything we love about our favorite editors. We designed it to be deeply customizable, but still approachable using the default configuration.
 
@@ -9,7 +9,7 @@ announcements.
 
 ## Building Atom 1.15.0 for armv7l machine
 
-![atom-1.15.0-armv7l](http://i.imgur.com/BFspfjR.jpg)
+![atom-1.15.0-armv7l](https://i.gyazo.com/ce02f284e5d47e0b77a60728aadf0e98.png)
 I was unable to build the newest version of Atom due to broken mksnapshot binaries for armv7l, so in this guide we will be using the latest stable version (1.15.0).
 
 Please, do not try to build it on other platforms. This fork only for armv7l machines!
