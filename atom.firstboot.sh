@@ -50,7 +50,7 @@
 ./resources/app/apm/bin/apm install symbols-view
 ./resources/app/apm/bin/apm install tabs
 ./resources/app/apm/bin/apm install timecop
-./resources/app/apm/bin/apm install tree-view
+./resources/app/apm/bin/apm install tree-view@0.241.1
 ./resources/app/apm/bin/apm install update-package-dependencies
 ./resources/app/apm/bin/apm install welcome
 ./resources/app/apm/bin/apm install whitespace
