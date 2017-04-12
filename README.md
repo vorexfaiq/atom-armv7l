@@ -66,7 +66,7 @@ Okay, I don't know how to fix this error before installing, but I have a way to 
 
 Open your Atom folder with sources (where you download Atom via git) - e.g `cd ~/atom/`. 
 
-Install asar (electron archivator-like programm) by `npm install asar` and after installing go to atom/out/atom-1.15.0-armv7l/resources by `cd ~/atom/out/atom-1.15.0-armv7l`.
+Install asar (electron archivator-like programm) by `npm install asar` and after installing go to atom/out/atom-1.15.0-armv7l/resources by `cd ~/atom/out/atom-1.15.0-armv7l/resources`.
 
 Unpack app.asar in folder app.asar.ext (no matter how you name it) by `node ~/atom/node_modules/asar/bin/asar.js e app.asar app.asar.ext` and wait some time for extracting.
 
@@ -78,7 +78,7 @@ After all this steps, backup original app.asar to somewhere, remove it and pack 
 
 - After building and launching Atom I got white screen, developer tools and string where I can type. Where is interface?
 
-It looks like Atom packages that are normally downloaded during install are missing. You will need to launch Atom for first time, to let it create the profile folder (~/.atom), then, move atom.firstboot.sh to your ready Atom folder with binaries (e.g ~/atom/out/app/atom-1.15.0-armv7l/) and launch it. This script will reinstall all default packages.
+It looks like Atom packages that are normally downloaded during install are missing. You will need to launch Atom for first time, to let it create the profile folder (~/.atom), then, move atom.firstboot.sh to your ready Atom folder with binaries (e.g ~/atom/app/atom-1.15.0-armv7l/) and launch it. This script will reinstall all default packages.
 
 
 If you're unable to build it on your machine, report error to the issues or write to my email in my profile for armv7l prebuilt binaries. 
