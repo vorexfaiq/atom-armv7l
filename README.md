@@ -78,6 +78,10 @@ A: No, you can't. This fork is ONLY for armv7l machines.
 
 A: No, you don't. You can freely update all packages exclude tree-view package, because newer versions works only with newer versions of Atom. Our version of Atom (1.15.0) works only with tree-view package 0.214.1. This version installed by atom.firstboot.sh.
 
+- Q: Do i need to execute, edit something after build?
+
+A: You need to execute Atom binary to let him create his folder that contains configs, packages, etc. (~/.atom/), close it, then run atom.firstboot.sh to install default packages (for unknown reasons packages installed during build are missing). After package install you can freely using Atom.
+
 ## License
 
 [MIT](https://github.com/atom/atom/blob/master/LICENSE.md)
