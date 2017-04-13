@@ -87,9 +87,11 @@ Latest versions of tree-view package works only with the newest versions of Atom
 ## F.A.Q.
 
 - Q: Can I built this fork on ia32, 64, arm, my cat, etc.?
+
 A: No, you can't. This fork is ONLY for armv7l machines.
 
 - Q: Do I need to avoid package updates?
+
 A: No, you don't. You can freely update all packages exclude tree-view package, because newer versions works only with newer versions of Atom. Our version of Atom (1.15.0) works only with tree-view package 0.214.1. This version installed by atom.firstboot.sh.
 
 ## License
