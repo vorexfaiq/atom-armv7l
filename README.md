@@ -83,6 +83,15 @@ It looks like Atom packages that are normally downloaded during install are miss
 - When I launch Atom, I got succesfull launch, but tree-view package throw error on start and didn't launch. How to fix it and launch tree-view package?
 
 Latest versions of tree-view package works only with the newest versions of Atom. Our Atom version (1.15.0) works only with tree-view 0.214.1 (this version will be installed after executing atom.firstboot.sh). So you can have troubles with it only if you updated tree-view package. To get working tree-view package back, open terminal in your atom binaries directory (e.g if you just now compiled it `cd ~/atom/out/atom-1.15.0-armv7l/`) and complete following commands in terminal: `./resources/app/apm/bin/apm uninstall tree-view` wait for successfull uninstal, then `./resources/app/apm/bin/apm install tree-view@0.214.1`.
+
+## F.A.Q.
+
+- Q: Can I built this fork on ia32, 64, arm, my cat, etc.?
+A: No, you can't. This fork is ONLY for armv7l machines.
+
+- Q: Do I need to avoid package updates?
+A: No, you don't. You can freely update all packages exclude tree-view package, because newer versions works only with newer versions of Atom. Our version of Atom (1.15.0) works only with tree-view package 0.214.1. This version installed by atom.firstboot.sh.
+
 ## License
 
 [MIT](https://github.com/atom/atom/blob/master/LICENSE.md)
