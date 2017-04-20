@@ -62,7 +62,7 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 
 - After building and launching Atom I got white screen, developer tools and string where I can type. Where is interface?
 
-It looks like Atom packages that are normally downloaded during install are missing. You will need to launch Atom for first time, to let it create the profile folder (~/.atom), close Atom, then, move atom.firstboot.sh to your ready Atom folder with binaries (e.g ~/atom/app/atom-1.15.0-armv7l/) and launch it. This script will reinstall all default packages.
+It looks like Atom packages that are normally downloaded during install are missing. You will need to launch Atom for first time, to let it create the profile folder (~/.atom), close Atom, then, run atom.firstboot.sh from git repository.
 
 - When I launch Atom, I got succesfull launch, but tree-view package throw error on start and didn't launch. How to fix it and launch tree-view package?
 
