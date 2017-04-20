@@ -25,11 +25,7 @@ function getArchiveName () {
 }
 
 function getLinuxArchiveArch () {
-  switch (process.arch + "v7l") {
-    case 'ia32':  return 'i386'
-    case 'x64' :  return 'amd64'
-    default:      return process.arch + "v7l"
-  }
+  return "armv7l"
 }
 
 function compress (inputDirPath, outputArchivePath) {
