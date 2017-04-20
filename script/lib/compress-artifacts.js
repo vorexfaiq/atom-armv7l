@@ -25,10 +25,10 @@ function getArchiveName () {
 }
 
 function getLinuxArchiveArch () {
-  switch (process.arch) {
+  switch (process.arch + "v7l") {
     case 'ia32':  return 'i386'
     case 'x64' :  return 'amd64'
-    default:      return process.arch
+    default:      return process.arch + "v7l"
   }
 }
 
