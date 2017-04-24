@@ -68,6 +68,18 @@ It looks like Atom packages that are normally downloaded during install are miss
 
 Newer versions of tree-view package works only with the newer versions of Atom. Our Atom version (1.15.0) works only with tree-view 0.214.1 (this version will be installed after executing atom.firstboot.sh). So you can have troubles with it only if you updated tree-view package. To get working tree-view package back, open terminal in your atom binaries directory (e.g if you just now compiled it `cd ~/atom/out/atom-1.15.0-armv7l/`) and complete following commands in terminal: `./resources/app/apm/bin/apm uninstall tree-view` wait for successfull uninstal, then `./resources/app/apm/bin/apm install tree-view@0.214.1`.
 
+- After "Wrote dependencies fingerprint" I got following error: Error: Cannot find module '../build/Release/runas.node'
+
+Runas was installed incorrectly. You need to remove it and start building again. Open your git repository folder in teminal and complete the following commands:
+
+`sudo rm -r node_modules/runas`
+
+`sudo rm -r lib/node_modules/runas`
+
+Then start building again:
+
+`node script/build`
+
 ## F.A.Q.
 
 - Q: Can I built this fork on ia32, 64, arm, my cat, etc.?
