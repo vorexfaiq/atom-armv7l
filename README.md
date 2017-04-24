@@ -32,7 +32,7 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 
 `sudo apt-get install npm` - install Node.js package manager.
 
-`npm install -g npm` - update Node.js package manager.
+`sudo npm install -g npm` - update Node.js package manager.
 
 `npm config set python /usr/bin/python2` - locate Python 2 path for Node-GYP.
 
