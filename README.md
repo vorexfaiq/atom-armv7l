@@ -28,7 +28,7 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 
 `nvm use 6.10.2` - set Node.js version to 6.10.2 for this session.
 
-- Node.js package manager 4.4.4.
+- Node.js package manager.
 
 `sudo apt-get install npm` - install Node.js package manager.
 
