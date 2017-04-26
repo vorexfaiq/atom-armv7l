@@ -62,7 +62,7 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 
 `chmod a+x atom.firstboot.sh`
 
-`./atom.firstboot.sh
+`./atom.firstboot.sh`
 
 ## Troubleshooting
 
