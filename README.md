@@ -12,7 +12,7 @@ announcements.
 ![atom-1.15.0-armv7l](https://i.gyazo.com/ce02f284e5d47e0b77a60728aadf0e98.png)
 I was unable to build the newest version of Atom due to broken mksnapshot binaries for armv7l, so in this guide we will be using the latest stable version (1.15.0).
 
-Please, do not try to build it on other platforms. This fork only for armv7l machines!
+This for was made only for armv7l machines, and should be built only on it!
 
 ### Prerequisites
 
@@ -54,9 +54,15 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 
 `cd atom`
 
-- Start building
+- Start building:
 
 `node script/build`
+
+- Install packages after successfull building:
+
+`chmod a+x atom.firstboot.sh`
+
+`./atom.firstboot.sh
 
 ## Troubleshooting
 
