@@ -64,6 +64,12 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 
 `./atom.firstboot.sh`
 
+Also, you can install Atom or create debian package.
+
+`node script/build --create-debian-package` - creates debian package.
+
+`sudo dpkg -i atom-armhf.deb` - installs Atom from previously built debian package (because -install flag doesn't work properly now)
+
 ## Troubleshooting
 
 - After building and launching Atom I got white screen, developer tools and string where I can type. Where is interface?
