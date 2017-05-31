@@ -12,11 +12,11 @@ announcements.
 ![atom-1.15.0-armv7l](https://i.gyazo.com/ce02f284e5d47e0b77a60728aadf0e98.png)
 I was unable to build the newest version of Atom due to broken mksnapshot binaries for armv7l, so in this guide we will be using the latest stable version (1.15.0).
 
-This for was made only for armv7l machines, and should be built only on it!
+This for was made only for armv7l machines, and should only be built on it!
+
+All builds tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don't guarantee that this guide will work for all devices. I succesfully built Atom on my machine and just want to share some build advice.
 
 ### Prerequisites
-
-All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don't guarantee that this guide will work for all devices. I succesfully built Atom on my machine and just want to share some build advice.
 
 - armv7l machine. You can check it by typing `uname -m` to terminal emulator.
 
@@ -64,7 +64,7 @@ All manipulations tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don'
 
 `./atom.firstboot.sh`
 
-Also, you can install Atom or create debian package.
+Also, you can install Atom or create a Debian package.
 
 `node script/build --create-debian-package` - creates debian package.
 
@@ -72,13 +72,13 @@ Also, you can install Atom or create debian package.
 
 ## Troubleshooting
 
-- After building and launching Atom I got white screen, developer tools and string where I can type. Where is interface?
+- After building and launching Atom I got white screen, developer tools and string where I can type. Where is the interface?
 
-It looks like Atom packages that are normally downloaded during install are missing. You will need to launch Atom for first time, to let it create the profile folder (~/.atom), close Atom, then, run atom.firstboot.sh from git repository.
+It looks like Atom packages that are normally downloaded during the install are missing. You will need to launch Atom for first time, to let it create the profile folder (~/.atom), close Atom, then run ./atom.firstboot.sh from the git repository.
 
-- When I launch Atom, I got succesfull launch, but tree-view package throw error on start and didn't launch. How to fix it and launch tree-view package?
+- When I launch Atom, I got succesfull launch, but tree-view package throw's an error on start and didn't launch. How to fix it and launch tree-view package?
 
-Newer versions of tree-view package works only with the newer versions of Atom. Our Atom version (1.15.0) works only with tree-view 0.214.1 (this version will be installed after executing atom.firstboot.sh). So you can have troubles with it only if you updated tree-view package. To get working tree-view package back, open terminal in your atom binaries directory (e.g if you just now compiled it `cd ~/atom-armv7l/out/atom-1.15.0-armv7l/`) and complete following commands in terminal: `./resources/app/apm/bin/apm uninstall tree-view` wait for successfull uninstal, then `./resources/app/apm/bin/apm install tree-view@0.214.1`.
+Newer versions of tree-view package works only with the newer versions of Atom. Our Atom version (1.15.0) works only with tree-view 0.214.1 (this version will be installed after executing atom.firstboot.sh). So you can have troubles with it only if you updated tree-view package. To get working tree-view package back, open terminal in your atom binaries directory (e.g if you just now compiled it `cd ~/atom-armv7l/out/atom-1.15.0-armv7l/`) and complete following commands in terminal: `./resources/app/apm/bin/apm uninstall tree-view` wait for successfull uninstall, then `./resources/app/apm/bin/apm install tree-view@0.214.1`.
 
 - After "Wrote dependencies fingerprint" I got following error: Error: Cannot find module '../build/Release/runas.node'
 
@@ -96,15 +96,15 @@ Then start building again:
 
 - Q: Can I built this fork on ia32, 64, arm, my cat, etc.?
 
-A: No, you can't. This fork is ONLY for armv7l machines.
+A: No, you can't. This fork is ONLY for armv7l machines. If you want to build for any other architectures, use the official atom repo.
 
 - Q: Do I need to avoid package updates?
 
-A: No, you don't. You can freely update all packages exclude tree-view package, because newer versions works only with newer versions of Atom. Our version of Atom (1.15.0) works only with tree-view package 0.214.1. This version installed by atom.firstboot.sh.
+A: No, you don't. You can freely update all packages exclude tree-view package, because newer versions work only with the newer versions of Atom. Our version of Atom (1.15.0) works only with tree-view package 0.214.1. This version installed by atom.firstboot.sh.
 
 - Q: Do i need to execute, edit something after build?
 
-A: You need to execute Atom binary to let him create his folder that contains configs, packages, etc. (~/.atom/), close it, then run atom.firstboot.sh to install default packages (for unknown reasons packages installed during build are missing). After package install you can freely using Atom.
+A: You need to execute Atom binary to let it create the folder that contains configs, packages, etc. (~/.atom/), close it, then run atom.firstboot.sh to install default packages (for unknown reasons packages installed during build are missing). After package install you can freely using Atom.
 
 ## License
 
