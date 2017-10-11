@@ -12,9 +12,9 @@ announcements.
 ![atom-1.15.0-armv7l](https://i.gyazo.com/ce02f284e5d47e0b77a60728aadf0e98.png)
 I was unable to build the newest version of Atom due to broken mksnapshot binaries for armv7l, so in this guide we will be using the latest stable version (1.15.0).
 
-This for was made only for armv7l machines, and should only be built on it!
+This was made only for armv7l machines, and should only be built on it!
 
-All builds tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don't guarantee that this guide will work for all devices. I succesfully built Atom on my machine and just want to share some build advice.
+All builds tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don't guarantee that this guide will work for all devices. I have succesfully built Atom on my machine and just want to share some build advice.
 
 ### Prerequisites
 
@@ -64,23 +64,23 @@ All builds tested on Xubuntu 14.04 @ ASUS Transformer Pad TF300TG. I don't guara
 
 `./atom.firstboot.sh`
 
-Also, you can install Atom or create a Debian package.
+Also, you can install Atom directly, or create a Debian package.
 
 `node script/build --create-debian-package` - creates debian package.
 
-`sudo dpkg -i atom-armhf.deb` - installs Atom from previously built debian package (because -install flag doesn't work properly now)
+`sudo dpkg -i atom-armhf.deb` - installs Atom from previously built debian package (this is necessary since the `-install` flag is not supported as of now)
 
 ## Troubleshooting
 
-- After building and launching Atom I got white screen, developer tools and string where I can type. Where is the interface?
+- After building and launching Atom I see a white screen, developer tools and string input where I can type. Where is the interface?
 
-It looks like Atom packages that are normally downloaded during the install are missing. You will need to launch Atom for first time, to let it create the profile folder (~/.atom), close Atom, then run ./atom.firstboot.sh from the git repository.
+It looks like Atom packages that are normally downloaded during the install are missing. You will need to launch Atom once, to let it create the profile folder (~/.atom), close it again and then run ./atom.firstboot.sh from the git repository.
 
-- When I launch Atom, I got succesfull launch, but tree-view package throw's an error on start and didn't launch. How to fix it and launch tree-view package?
+- When I launch Atom, I launches succesfully, but the `tree-view` package throws an error on startup and doesn't launch. How to fix this and have `tree-view` package load correctly?
 
-Newer versions of tree-view package works only with the newer versions of Atom. Our Atom version (1.15.0) works only with tree-view 0.214.1 (this version will be installed after executing atom.firstboot.sh). So you can have troubles with it only if you updated tree-view package. To get working tree-view package back, open terminal in your atom binaries directory (e.g if you just now compiled it `cd ~/atom-armv7l/out/atom-1.15.0-armv7l/`) and complete following commands in terminal: `./resources/app/apm/bin/apm uninstall tree-view` wait for successfull uninstall, then `./resources/app/apm/bin/apm install tree-view@0.214.1`.
+Newer versions of the `tree-view` package only work with the newer versions of Atom. Our Atom version (1.15.0) works only with tree-view 0.214.1 (this version will be installed after executing atom.firstboot.sh). So you can only run into troubles with it if you updated the `tree-view` package manually. To get the `tree-view` package working again, open terminal in your atom binaries directory (e.g if you just now compiled it `cd ~/atom-armv7l/out/atom-1.15.0-armv7l/`) and enter the following commands in terminal: `./resources/app/apm/bin/apm uninstall tree-view` wait for it to successfully uninstall, then `./resources/app/apm/bin/apm install tree-view@0.214.1`.
 
-- After "Wrote dependencies fingerprint" I got following error: Error: Cannot find module '../build/Release/runas.node'
+- After "Wrote dependencies fingerprint" I receive the following error: `Error: Cannot find module '../build/Release/runas.node'`
 
 Runas was installed incorrectly. You need to remove it and start building again. Open your git repository folder in teminal and complete the following commands:
 
@@ -100,9 +100,9 @@ A: No, you can't. This fork is ONLY for armv7l machines. If you want to build fo
 
 - Q: Do I need to avoid package updates?
 
-A: No, you don't. You can freely update all packages exclude tree-view package, because newer versions work only with the newer versions of Atom. Our version of Atom (1.15.0) works only with tree-view package 0.214.1. This version installed by atom.firstboot.sh.
+A: No, you don't. You can freely update all packages, **with the exception of the `tree-view` package**, because newer versions work only with the newer versions of Atom. Our version of Atom (1.15.0) works only with `tree-view` package 0.214.1. This version installed by atom.firstboot.sh.
 
-- Q: Do i need to execute, edit something after build?
+- Q: Do i need to execute or edit something after building?
 
 A: You need to execute Atom binary to let it create the folder that contains configs, packages, etc. (~/.atom/), close it, then run atom.firstboot.sh to install default packages (for unknown reasons packages installed during build are missing). After package install you can freely using Atom.
 
